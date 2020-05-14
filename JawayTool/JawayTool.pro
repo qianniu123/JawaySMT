@@ -14,12 +14,26 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+INCLUDEPATH += ./Port \
+               ./Proto \
 
 SOURCES += \
+    Port/port.cpp \
+    Port/serialport.cpp \
+    Port/socketport.cpp \
+    Proto/proto.cpp \
+    Proto/proto_a/proto_A569.cpp \
+    Proto/proto_b/proto_A567.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    Port/port.h \
+    Port/serialport.h \
+    Port/socketport.h \
+    Proto/proto.h \
+    Proto/proto_a/proto_A569.h \
+    Proto/proto_b/proto_A567.h \
     mainwindow.h
 
 FORMS += \
